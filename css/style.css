@@ -1,1 +1,201 @@
 
+/* Basic styles for mobile screens */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #2f4050;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: #2f4050;
+}
+
+/* Header: Flexbox */
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    width: 90%;
+    max-width: 1280px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #e8dff5;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Main container */
+
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* Hero: CSS Grid */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-banner,
+.hero-sidebar {
+    padding: 24px;
+    background-color: #f3f5f9;
+}
+
+.hero-banner {
+    background-color: #e8dff5;
+}
+
+.hero-banner p {
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.hero-sidebar p {
+    margin-top: 12px;
+}
+
+.hero-sidebar h3 {
+    margin-top: 20px;
+}
+
+/* Links styled as buttons */
+
+.main-button,
+.card-button {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #668fbc;
+    color: #15263b;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Workshop gallery: CSS Grid */
+
+.cards-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.gallery-heading {
+    margin-bottom: 20px;
+}
+
+
+/* Each card: Flexbox */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 280px;
+    background-color: #f3f5f9;
+}
+
+.image-placeholder {
+    padding: 34px 10px;
+    margin-bottom: 16px;
+    background-color: #e8dff5;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin-bottom: 16px;
+}
+
+.card-button {
+    margin-top: auto;
+    width: 125px;
+    text-align: center;
+}
+
+/* Footer: Flexbox */
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    width: 90%;
+    max-width: 1280px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #e8dff5;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Desktop layout */
+
+@media (min-width: 768px) {
+
+    .site-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .cards-gallery {
+        grid-template-columns:
+            repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .site-footer {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+}
